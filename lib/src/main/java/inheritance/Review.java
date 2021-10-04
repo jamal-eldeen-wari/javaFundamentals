@@ -5,6 +5,7 @@ private String body;
 private String author;
 private int  stars;
 
+
     public Review(String body, String author, int stars) {
 //        Only stars from 0 to 5 including 0 and 5;
         if (stars>=0 && stars<=5){
@@ -12,6 +13,8 @@ private int  stars;
             this.author = author;
             this.stars = stars;
         }
+
+
 
     }
 
@@ -39,7 +42,6 @@ private int  stars;
     public void setStars(int stars) {
         this.stars = stars;
     }
-
 
 
     @Override

@@ -39,7 +39,58 @@ class LibraryTest {
     @Test void testToStringReview(){
         Review reviewTest = new Review("Best Restaurants Ever","Jamal",5);
         assertEquals("Review{body='Best Restaurants Ever', author='Jamal', stars=5}",String.valueOf(reviewTest));
-
-
     }
+
+    @Test void testShopConstructor(){
+        Shops shopsTest = new Shops("Target","Grocery store ", 4, 3);
+        String actualValue = shopsTest.getName();
+        assertEquals(actualValue,shopsTest.getName());
+    }
+
+    @Test void testShopToString(){
+        Shops testShop = new Shops("Best Buy","Electronic shop",4,5);
+        assertEquals("Shops{name='Best Buy', description='Electronic shop', price=4}",String.valueOf(testShop));
+    }
+
+    @Test void testTheaterConstructor(){
+        Theater theater = new Theater("Nashvile Dinner Theater", 5);
+        String actualValue = theater.getName();
+        assertEquals(actualValue,theater.getName());
+    }
+
+    @Test void testToStringTheater(){
+        Theater theater = new Theater("Nashvile Dinner Theater",5);
+        assertEquals("Theater{name='Nashvile Dinner Theater', rating ='5.0'}",String.valueOf(theater));
+    }
+
+    @Test void testAddMovie(){
+        Theater theater = new Theater("Nashvile Dinner Theater",5);
+        theater.addMovie("Cobra Kai");
+        theater.addMovie("Breaking Bad");
+        theater.addMovie("Rambo");
+        theater.addMovie("Bad Boys");
+        int size  = theater.getMovieList().size();
+        assertEquals(size,theater.getMovieList().size());
+    }
+
+    @Test void testRemoveMovie(){
+        Theater theater = new Theater("Nashvile Dinner Theater",5);
+        theater.addMovie("Cobra Kai");
+        theater.addMovie("Breaking Bad");
+        theater.addMovie("Rambo");
+        theater.addMovie("Bad Boys");
+//        Remove methods;
+        theater.removeMovie("Rambo");
+
+        int size = theater.getMovieList().size();
+        assertEquals(size,theater.getMovieList().size());
+    }
+
+    @Test void testReviewForTheater(){
+        Theater theater = new Theater("Nashvile Dinner Theater",5);
+        theater.addReview(new Review("This is a very good theater","Jamal",4));
+        int size = theater.getReviewsTheater().size();
+        assertEquals(size,theater.getReviewsTheater().size());
+    }
+
 }

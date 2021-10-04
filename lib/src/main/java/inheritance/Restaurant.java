@@ -57,12 +57,6 @@ public class Restaurant implements Reviews, Dollar${
     @Override
     public void addReview(Review review) {
         restaurantRate.add(review);
-//        double addRev = 0;
-
-//        for (Review r: restaurantRate){
-//            addRev = addRev +r.getStars();
-//        }
-//        stars = addRev/restaurantRate.size();
         update();
     }
     public void update(){

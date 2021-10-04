@@ -16,6 +16,18 @@ public class Main {
         restaurant2.addReview(review1);
         restaurant3.addReview(review2);
 
+        Shops shop1 = new Shops("Best Buy","Electronic shop",4,5);
+        shop1.addReview(new Review("Very good shop with affordable prices", "Jamal",5));
+
+        Theater theater = new Theater("Nashvile Dinner Theater", 5);
+        theater.addMovie("Rambo");
+        theater.addMovie("Black Men");
+        theater.addMovie("The Grudge");
+        theater.addMovie("Home Alone");
+        theater.removeMovie("Black Men");
+
+        theater.addReview(new Review("This theater is good","Jamal", 5));
+
 
         System.out.println(restaurant);
         System.out.println(restaurant.getRestaurantRate());
@@ -28,6 +40,17 @@ public class Main {
         System.out.println(restaurant3);
         System.out.println(restaurant3.getRestaurantRate());
         System.out.println("Price Category "+restaurant3.addDollar$());
+
+
+        System.out.println(shop1);
+        System.out.println(shop1.getShopsReview());
+        System.out.println(shop1.addDollar$());
+
+        System.out.println(theater);
+        System.out.println(theater.getReviewsTheater());
+        theater.revMovie(new Review("This movie is all about brute strength", "Mohammad",4),"Rambo");
+        System.out.println(theater.getMovieList());
+
 
 
 
